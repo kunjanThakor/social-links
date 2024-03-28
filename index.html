@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Link Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            width: 300px;
+            height: 450px;
+            padding: 20px;
+            text-align: center;
+            background: #f7f7f7;
+            border-radius: 10px;
+            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); */
+            filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.4));
+        }
+
+        .card img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin-bottom: 50px;
+            margin-top: 40px;
+            filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)) brightness(1.22);
+            image-resolution: 300dpi;
+            mix-blend-mode: multiply;
+
+        }
+
+        .card a {
+            display: inline-block;
+            margin: 5px;
+            text-decoration: none;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .test {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-top: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fa,
+        .fa-brands {
+            font-size: 14px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="card">
+        <img src="./assets/profile (2).jpg" alt="Profile Image">
+        <div class="text">
+            <h4>Kunjan Thakor</h4>
+            <p>Front-end developer</p>
+            <p>Anand | Gujarat | India</p>
+        </div>
+        <div class="test">
+            <a href="https://github.com/kunjanThakor" target="_blank" class="fa fa-github"></a>
+            <a href="https://twitter.com/kunjan_thakor_" class="fa-brands fa-x-twitter"></a>
+            <a href="https://www.instagram.com/imkunjanthakor/" class="fa fa-instagram"></a>
+            <a href="https://www.linkedin.com/in/kunjan-thakor-b83743282/" class="fa fa-linkedin"></a>
+        </div>
+
+    </div>
+
+</body>
+<script src="https://kit.fontawesome.com/efc88b9e2c.js" crossorigin="anonymous"></script>
+
+</html>
