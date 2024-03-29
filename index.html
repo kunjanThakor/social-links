@@ -65,14 +65,74 @@
         .fa-brands {
             font-size: 14px;
         }
+
+        .white {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .dark {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .dark img {
+            mix-blend-mode: normal;
+        }
+
+        .dark .card {
+            filter: drop-shadow(0 -15px 45px rgba(255, 255, 255, 1.7));
+        }
+
+        input {
+            display: none;
+        }
+
+        div label {
+            position: relative;
+            cursor: pointer;
+            display: block;
+            width: 50px;
+            height: 30px;
+            background: #cccccc;
+            border-radius: 50px;
+            transition: 300ms linear;
+        }
+
+        div label:before {
+            position: absolute;
+            top: 50%;
+            left: 2px;
+            transform: translateY(-50%);
+            content: "";
+            display: block;
+            width: 25px;
+            height: 25px;
+            background: #ffffff;
+            border-radius: 50%;
+            transition: left 300ms linear;
+        }
+
+        div input:checked+label {
+            background: #cccccc;
+        }
+
+        div input:checked+label:before {
+            left: 20px;
+            background: #000;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body class="white">
 
-    <div class="card">
-        <img src="./assets/profile (2).jpg" alt="Profile Image">
+    <div class="card white">
+        <div>
+            <input type="checkbox" class="btn" id="toggle-btn">
+            <label for="toggle-btn"></label>
+        </div>
+        <img src="./assets/profile (2).jpg" alt="Profile Image" class="white">
         <div class="text">
             <h4>Kunjan Thakor</h4>
             <p>Front-end developer</p>
@@ -84,10 +144,20 @@
             <a href="https://www.instagram.com/imkunjanthakor/" target="_blank" class="fa fa-instagram"></a>
             <a href="https://www.linkedin.com/in/kunjan-thakor-b83743282/" target="_blank" class="fa fa-linkedin"></a>
         </div>
-
     </div>
 
 </body>
 <script src="https://kit.fontawesome.com/efc88b9e2c.js" crossorigin="anonymous"></script>
+<script>
+
+
+    const btn = document.querySelector('.btn')
+    btn.addEventListener('click', () => {
+        const white = document.querySelectorAll('.white')
+        white.forEach(element => {
+            element.classList.toggle('dark')
+        });
+    })
+</script>
 
 </html>
